@@ -15,3 +15,15 @@ Test data:
 § Data 1: Test for bill values 275, 40 and 430
  */
 
+var _billValue = 40;
+var _tipProcentage;
+
+if (_billValue >= 50 && _billValue <= 300) {
+  _tipProcentage = (15 * _billValue) / 100
+  console.log(`The bill was ${_billValue}, the tip was ${_tipProcentage}. The value is: ${_billValue + _tipProcentage}`)
+} else if (_billValue >= 300) {
+  _tipProcentage = (20 * _billValue) / 100
+  console.log(`The bill was ${_billValue}, the tip was ${_tipProcentage}. The value is: ${_billValue + _tipProcentage}`)
+} else {
+  console.log(`The bill was under 50`)
+}
