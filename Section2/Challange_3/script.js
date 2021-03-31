@@ -16,3 +16,25 @@ both teams have the same score and both have a score greater or equal 100
 points. Otherwise, no team wins the trophy
 */
 
+/*
+Test data:
+§ Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+§ Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+§ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+*/
+
+
+var _dolphinesScore = (96 + 108 + 89) / 3
+var _koalasScore = (88 + 91 + 110) / 3
+
+if (_dolphinesScore >= 100 || _koalasScore >= 100) {
+  if (_dolphinesScore > _koalasScore && _dolphinesScore >= 100) {
+    console.log(`Dolphines wins the tournament with the score of ${_dolphinesScore}, over Koalas score of ${_koalasScore}`)
+  } else if (_koalasScore > _dolphinesScore && _koalasScore >= 100) {
+    console.log(`Koalas wins the tournament with the score of ${_koalasScore}, over Dolphines score of ${_dolphinesScore}`)
+  }
+} else if (_dolphinesScore >= 100 && _koalasScore >= 100) {
+  console.log(`Their has been a draw, between Dolphines and Koalas`)
+} else {
+  console.log(`No winner has been found`)
+}
