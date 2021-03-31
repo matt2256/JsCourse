@@ -3,25 +3,35 @@ Challange 2
 */
 
 /*
-John
-1. 89
-2. 120
-3. 103
 
-Mike
-1. 116
-2. 94
-3. 123
-
-Mary
-1. 97
-2. 134
-3. 105
-*/
 
 /*
-1. Calculate the avager score for each team
-2. Decide which teams wins in avager (highest score), and print the winner
-3. Then change the score to show different winners. Rember to take in account a draw
+Your tasks:
+1. Print a nice output to the console, saying who has the higher BMI. The message
+is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
+BMI (28.3) is higher than John's (23.9)!"
 */
+
+var _markHeight = 169;
+var _markWeight = 78;
+
+//Johns data
+var _johnHeight = 195
+var _johnWeight = 92;
+
+var _markBmi = _markWeight / (_markHeight ** 2) * 10000
+var _johnBmi = _johnWeight / (_johnHeight ** 2) * 10000
+
+console.log(_markBmi)
+console.log(_johnBmi)
+
+var _markHeigherThanJohn = _markBmi > _johnBmi
+
+if (_markBmi > _johnBmi) {
+  console.log(`Marks BMI is heigher than Johns. Mark has a BMI of ${_markBmi}. John has a BMI of ${_johnBmi}`);
+} else {
+  console.log(`Johns Bmi is heigher than Marks. John has a BMI of ${_johnBmi}. Mark has a BMI of ${_markBmi}`)
+}
+
 
